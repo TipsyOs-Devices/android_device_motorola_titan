@@ -26,6 +26,11 @@ TARGET_LIBINIT_DEFINES_FILE := $(DEVICE_PATH)/init/init_titan.c
 # Assert
 TARGET_OTA_ASSERT_DEVICE := titan,titan_umts,titan_udstv,titan_umtsds,titan_retaildsds,XT1068,XT1064,XT1063,XT1069
 
+# Default.prop overrides to get adb working at boot   
+ADDITIONAL_DEFAULT_PROPERTIES += \
+		ro.secure=0 \
+		ro.adb.secure=0 \
+
 # Board
 TARGET_BOARD_INFO_FILE := $(DEVICE_PATH)/board-info.txt
 
